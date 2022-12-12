@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+int main()//функція
+{
+setlocale(LC_CTYPE, ".1251");
+int n;
+double S, a, x, e;
+printf("\nx=");
+scanf("%lf", &x);
+printf("\ne=");
+scanf("%lf", &e);
+n=2;
+
+S=0;
+a=1;
+do {
+a*=-(x*x)/(2*n);
+S+=a;
+n++;
+} while ( fabs(a)>e );
+printf("%lf", S);
+return 0;
+}
